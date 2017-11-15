@@ -36,7 +36,7 @@ namespace Excel_IO
 
         object _missingValue = System.Reflection.Missing.Value;
 
-        string file = @"c:\Users\Public\Documents\LockDown_Log.xlsx";
+        string file = @"";
         int cellRow = 1;
         int numberOfEntries;
         int timeLeft;
@@ -54,7 +54,7 @@ namespace Excel_IO
             
             if (!System.IO.File.Exists(file))
             {
-                MessageBox.Show("Click 'OK' to create the log file! It will be stored at: " + file);
+                MessageBox.Show("Click 'OK' to create the log file!");
                 openExcel();
                 //create file
                 oWB = (Microsoft.Office.Interop.Excel._Workbook)(oXL.Workbooks.Add(""));
